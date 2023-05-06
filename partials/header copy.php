@@ -18,9 +18,24 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                  <?php
-                    print_menu($Header_menu);
-                  ?> 
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.php">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.php">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="services.php">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.php">WEB</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.php">ELEMENTS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.php">CONTACT</a>
+                    </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
                     </li>
