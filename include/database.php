@@ -9,7 +9,15 @@
             }catch(PDOException $e){
                 var_dump($e->getMessage());
             }
+            /*if($this->conn){
+                echo "Sme spojeni";
+             } else echo "nie sme";
+             */
+
         }
     }
-    
+    /*$db = new Database();
+    $dv -> conn;
+    Toto je na kontrolu spojenia
+    */
 ?>
