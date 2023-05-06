@@ -21,9 +21,6 @@
                   <?php
                     print_menu($Header_menu);
                   ?> 
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><img src="images/search-icon.png"></a>
-                    </li>
                   </ul>
                 </div>
             </nav>
