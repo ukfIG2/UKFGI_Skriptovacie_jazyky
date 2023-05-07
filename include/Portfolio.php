@@ -6,7 +6,7 @@
             $this->db = new Database();
            
             try{
-                $query = $this->db->conn->query("SELECT * FROM portfolio");
+                $query = $this->db->conn->query("SELECT * FROM Portfolio");
                 $portfolio = $query->fetchAll(PDO::FETCH_OBJ);
                 return $portfolio;
             }catch(PDOException $e){
