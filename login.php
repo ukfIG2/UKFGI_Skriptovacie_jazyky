@@ -51,6 +51,7 @@
 						</nav>
 						<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 							<div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
+								<!--Login START-->
 								<form class="form-login-signup">
 									<div class="form-label-group">
 										<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
@@ -70,23 +71,26 @@
 									<button class="btn btn-lg btn-google btn-block soi-hv text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
 									<button class="btn btn-lg btn-facebook btn-block soi-hv  text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
 								</form>
+								<!--Login END-->
 							</div>
 							<div class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-signup-tab">
-								<form class="form-login-signup">
+								<!--Register START-->
+								<form class="form-login-signup" action="include/register/insert.php" method="post">
+
 									<div class="form-label-group">
-										<input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
+										<input type="text" id="inputUserame" class="form-control" name="user_name" placeholder="Username" required autofocus>
 										<label for="inputUserame">Username</label>
 									</div>
 
 									<div class="form-label-group">
-										<input type="email" id="inputEmail-1" class="form-control" placeholder="Email address" required>
+										<input type="email" id="inputEmail-1" class="form-control" name="user_email" placeholder="Email address" required>
 										<label for="inputEmail-1">Email address</label>
 									</div>
 								  
 									<hr>
 
 									<div class="form-label-group">
-										<input type="password" id="inputPassword-1" class="form-control" placeholder="Password" required>
+										<input type="password" id="inputPassword-1" class="form-control" name="user_password" placeholder="Password" required>
 										<label for="inputPassword-1">Password</label>
 									</div>
 								  
@@ -96,15 +100,14 @@
 									</div>
 									
 									<div class="custom-control custom-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" id="customCheck2">
+										<input type="checkbox" class="custom-control-input" id="customCheck2" required>
 										<label class="custom-control-label" for="customCheck2">I Agree To The Terms & Conditions</label>
 									</div>
 
-									<button class="btn btn-lg btn-primary btn-block btn-color-hover text-uppercase" type="submit">Register</button>									
-									<hr class="my-4">
-									<button class="btn btn-lg btn-google btn-block soi-hv text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
-									<button class="btn btn-lg btn-facebook btn-block soi-hv text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
+									<button class="btn btn-lg btn-primary btn-block btn-color-hover text-uppercase" type="submit" value="Zaregistrovať" name="add_user">Register</button>									
+									
 								</form>
+								<!--Register END-->
 							</div>
 						</div>
 					</div>
