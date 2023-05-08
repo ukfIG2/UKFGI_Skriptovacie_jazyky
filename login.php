@@ -52,24 +52,21 @@
 						<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 							<div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
 								<!--Login START-->
-								<form class="form-login-signup">
+								<form class="form-login-signup" action="include/login/login.php" method="post">
+
 									<div class="form-label-group">
-										<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+										<input type="email" id="inputEmail" class="form-control" name="user_email" placeholder="Email address" required autofocus>
 										<label for="inputEmail">Email address</label>
 									</div>
 
 									<div class="form-label-group">
-										<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+										<input type="password" id="inputPassword" class="form-control" name="user_password" placeholder="Password" required>
 										<label for="inputPassword">Password</label>
 									</div>
-									<div class="custom-control custom-checkbox mb-3">
-										<input type="checkbox" class="custom-control-input" id="customCheck1">
-										<label class="custom-control-label" for="customCheck1">Remember password</label>
-									</div>
-									<button class="btn btn-lg btn-primary btn-color-hover btn-block text-uppercase" type="submit">Login</button>
+									
+									<button class="btn btn-lg btn-primary btn-color-hover btn-block text-uppercase" type="submit" value="Prihlásiť sa" name="log_user">Login</button>
 									<hr class="my-4">
-									<button class="btn btn-lg btn-google btn-block soi-hv text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
-									<button class="btn btn-lg btn-facebook btn-block soi-hv  text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+									
 								</form>
 								<!--Login END-->
 							</div>
