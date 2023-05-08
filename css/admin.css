@@ -1,0 +1,13 @@
+
+.admin-table{
+    border:1px solid lightgray;
+  }
+.admin-table tr td{
+    padding:10px;
+  }
+.admin-table tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+.admin-table tr:hover {
+    background-color: #ddd;
+  }
