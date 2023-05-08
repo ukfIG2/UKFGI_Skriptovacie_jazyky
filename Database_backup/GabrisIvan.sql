@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 07, 2023 at 01:03 AM
+-- Generation Time: May 09, 2023 at 12:09 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -24,44 +24,114 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `portfolio`
+-- Table structure for table `Kontakt`
 --
 
-CREATE TABLE `portfolio` (
-  `id` int(11) NOT NULL,
+CREATE TABLE `Kontakt` (
+  `idKontakt` int(11) NOT NULL,
+  `Name` varchar(20) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Phone` varchar(15) NOT NULL,
+  `Element` varchar(30) NOT NULL,
+  `Message` text NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
+
+--
+-- Dumping data for table `Kontakt`
+--
+
+INSERT INTO `Kontakt` (`idKontakt`, `Name`, `Email`, `Phone`, `Element`, `Message`, `Date`) VALUES
+(3, 'test', 'test@test', '00000000000', 'test', 'test', '2023-05-08 22:06:13'),
+(20, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdf', '2023-05-08 22:06:13'),
+(21, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdfsgsrgsgwsg', '2023-05-08 22:06:27');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Portfolio`
+--
+
+CREATE TABLE `Portfolio` (
+  `idPortfolio` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `image` text NOT NULL,
   `Text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
 
 --
--- Dumping data for table `portfolio`
+-- Dumping data for table `Portfolio`
 --
 
-INSERT INTO `portfolio` (`id`, `name`, `image`, `Text`) VALUES
+INSERT INTO `Portfolio` (`idPortfolio`, `name`, `image`, `Text`) VALUES
 (1, 'website element', 'images/icon-1.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq'),
 (2, 'applicatinos element', 'images/icon-2.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliq'),
 (3, 'design element', 'images/icon-3.png', 'Nieco Nieco');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Users`
+--
+
+CREATE TABLE `Users` (
+  `idUser` int(11) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Password` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Users` (`idUser`, `Name`, `Email`, `Password`) VALUES
+(90, 'test', 'test@test', 'test'),
+(92, 'a', 'a@a', 'a');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `portfolio`
+-- Indexes for table `Kontakt`
 --
-ALTER TABLE `portfolio`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `Kontakt`
+  ADD PRIMARY KEY (`idKontakt`);
+
+--
+-- Indexes for table `Portfolio`
+--
+ALTER TABLE `Portfolio`
+  ADD PRIMARY KEY (`idPortfolio`);
+
+--
+-- Indexes for table `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`idUser`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `portfolio`
+-- AUTO_INCREMENT for table `Kontakt`
 --
-ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `Kontakt`
+  MODIFY `idKontakt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `Portfolio`
+--
+ALTER TABLE `Portfolio`
+  MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
