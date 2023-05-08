@@ -41,11 +41,13 @@
                         
                         header("Location: ../../admin.php");
                     }else{
-                        echo 'Nesprávne heslo';
+                        //echo 'Nesprávne heslo';
+                        echo '<img src="../../images/password.jpg" alt="Your password is wrongg." style="height: 100%; width: 100%;" >';       
                     }
             }
             }else{
-                echo 'pouzivatel neexistuje';
+                //echo 'pouzivatel neexistuje';
+                echo '<img src="../../images/username.jpg" alt="Your username is wrong." style="height: 100%; width: 100%;" >';
             }
     }
     else "Isset nejde";

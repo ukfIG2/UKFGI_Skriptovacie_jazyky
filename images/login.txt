@@ -1,2 +1,6 @@
 dot-bg.png
 slider-item-3.jpg
+pass.jpg
+password.jpg
+username.jpg
+who.png
