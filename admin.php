@@ -35,22 +35,26 @@
     
                 echo '<table class="admin-table" >';
                   echo "<tr>";
+                    echo "<th>ID</th>";
                     echo "<th>Name</th>";
                     echo "<th>Email</th>";
                     echo "<th>Phone</th>";
                     echo "<th>Element</th>";
                     echo "<th>Message</th>";
+                    echo "<th>Date</th>";
                   echo "</tr>";
                 foreach($contact as $c){
                     echo '<tr>';
+                      echo '<td>'.$c->idKontakt;'</td>';
                       echo '<td>'.$c->Name;'</td>';
                       echo '<td>'.$c->Email;'</td>';
                       echo '<td>'.$c->Phone;'</td>';
                       echo '<td>'.$c->Element;'</td>';
                       echo '<td>'.$c->Message;'</td>';
+                      echo '<td>'.$c->Date;'</td>';
                       echo '<td>
-                              <form action="inc/contact/delete.php" method="post">
-                                  <button type = "submit" name="delete_contact" value="'.$c->id.'"'.'>Vymazať</button>
+                              <form action="include/Kontakt/delete.php" method="post">
+                                  <button type = "submit" name="delete_contact" value="'.$c->idKontakt.'"'.'>Vymazať</button>
                             </form></td>';
                     echo '</tr>';
                 }
