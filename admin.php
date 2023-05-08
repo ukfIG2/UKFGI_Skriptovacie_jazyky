@@ -10,7 +10,7 @@
 <div class="service_section layout_padding">
         <h1>Admin rozhranie</h1>
         <p>Nazdar <?php echo($_SESSION['user_name'][0]->Name);?></p><br>
-        <a href="inc/login/logout.php">Odhlásiť sa</a>
+        <a href="include/login/logout.php">Odhlásiť sa</a>
 </div>
 
 
