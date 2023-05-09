@@ -8,7 +8,7 @@ if(isset($_POST['add_user'])){
     $data = [
         'user_name' => $_POST["user_name"],
         'user_email' => $_POST["user_email"],
-        'user_password' => $_POST["user_password"],
+        'user_password' => sha1($_POST["user_password"]),
     ];
     //Ak niektoré pole nie je vyplnené 
     if(empty($_POST["user_name"])||empty($_POST["user_email"]) || empty($_POST["user_password"])){

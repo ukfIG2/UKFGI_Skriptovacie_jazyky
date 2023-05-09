@@ -6,7 +6,7 @@
     $db =  new Database();
     $data = [
         'user_email' => $_POST["user_email"],
-        'user_password' => $_POST["user_password"],
+        'user_password' => sha1($_POST["user_password"]),
     ];
     //print_r($data); //formular posiela
     //print_r($data["user_email"]); //formular posiela
