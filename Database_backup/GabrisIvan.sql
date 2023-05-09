@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 09, 2023 at 12:09 AM
+-- Generation Time: May 09, 2023 at 03:32 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -66,7 +66,8 @@ CREATE TABLE `Portfolio` (
 INSERT INTO `Portfolio` (`idPortfolio`, `name`, `image`, `Text`) VALUES
 (1, 'website element', 'images/icon-1.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq'),
 (2, 'applicatinos element', 'images/icon-2.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliq'),
-(3, 'design element', 'images/icon-3.png', 'Nieco Nieco');
+(3, 'design element', 'images/icon-3.png', 'Nieco Nieco'),
+(8, 'Who service', 'images/who.png', 'bla bla');
 
 -- --------------------------------------------------------
 
@@ -78,7 +79,7 @@ CREATE TABLE `Users` (
   `idUser` int(11) NOT NULL,
   `Name` varchar(30) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Password` varchar(150) NOT NULL
+  `Password` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
 
 --
@@ -86,8 +87,7 @@ CREATE TABLE `Users` (
 --
 
 INSERT INTO `Users` (`idUser`, `Name`, `Email`, `Password`) VALUES
-(90, 'test', 'test@test', 'test'),
-(92, 'a', 'a@a', 'a');
+(94, 'test', 'test@test', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3');
 
 --
 -- Indexes for dumped tables
@@ -125,13 +125,13 @@ ALTER TABLE `Kontakt`
 -- AUTO_INCREMENT for table `Portfolio`
 --
 ALTER TABLE `Portfolio`
-  MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

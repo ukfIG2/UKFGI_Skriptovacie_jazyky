@@ -62,6 +62,44 @@
   ?>
 </div>
 
+<div>
+  <h1>Elementy(portfolio)</h1>
+
+  <form action="include/portfolio/insert.php" method="post">
+            <input type="text" name="name" id="name" placeholder="Názov portfólia">
+            <input type="text" name="image" id="image" placeholder="Cesta k obrázku">
+            <input type="text" name="Text" id="Text" placeholder="Text k obrazku">
+            <input type="submit" value="Pridať" name="add_portfolio">
+  </form>
+
+  <?php
+
+  $portfolio = $Portfolio->get_portfolio();
+    
+                echo '<table class="admin-table" >';
+                  echo "<tr>";
+                    echo "<th>ID</th>";
+                    echo "<th>Name</th>";
+                    echo "<th>Image</th>";
+                    echo "<th>Text</th>";
+                  echo "</tr>";
+                foreach($portfolio as $c){
+                    echo '<tr>';
+                      echo '<td>'.$c->idPortfolio;'</td>';
+                      echo '<td>'.$c->name;'</td>';
+                      echo '<td>'.$c->image;'</td>';
+                      echo '<td>'.$c->Text;'</td>';
+                      echo '<td>
+                              <form action="include/portfolio/delete.php" method="post">
+                                  <button type = "submit" name="delete_portfolio" value="'.$c->idPortfolio.'"'.'>Vymazať</button>
+                            </form></td>';
+                    echo '</tr>';
+                }
+                echo '</table>';
+  ?>
+
+</div>
+
 </body>
 </html>
 

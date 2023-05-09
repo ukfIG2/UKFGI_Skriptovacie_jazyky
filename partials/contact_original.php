@@ -12,14 +12,10 @@
                             
                             <label for="co"></label> <!--Musi tam byt label, inak to nepojde-->
                             <select id="co" name="contact_element">
-                                <?php
-
-                                    $portfolio = $Portfolio->get_portfolio();
-                                    for ($i=0;$i<count($portfolio);$i++){
-                                    echo '<option value="'.$portfolio[$i]->name.'">'.$portfolio[$i]->name.'</option>';
-                                    }
-                              
-                              ?>
+                              <option value="-1">Select elements</option>
+                              <option value="saab">One</option>
+                              <option value="opel">Two</option>
+                              <option value="audi">Three</option>
                             </select>
                             
                             <textarea class="massage_text" placeholder="Massage" rows="5" id="comment" name="contact_message"></textarea>
