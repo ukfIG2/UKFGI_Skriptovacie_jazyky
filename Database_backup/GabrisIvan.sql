@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 12, 2023 at 09:50 AM
+-- Generation Time: May 12, 2023 at 01:26 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -35,7 +35,7 @@ CREATE TABLE `Kontakt` (
   `Element` varchar(30) NOT NULL,
   `Message` text NOT NULL,
   `Date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `Odpoved` text NOT NULL
+  `Odpoved` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `Kontakt` (
 INSERT INTO `Kontakt` (`idKontakt`, `Name`, `Email`, `Phone`, `Element`, `Message`, `Date`, `Odpoved`) VALUES
 (3, 'test', 'test@test', '00000000000', 'test', 'test', '2023-05-08 22:06:13', ''),
 (20, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdf', '2023-05-08 22:06:13', ''),
-(21, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdfsgsrgsgwsg', '2023-05-08 22:06:27', 'lenbo lebo\r\n');
+(21, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdfsgsrgsgwsg', '2023-05-08 22:06:27', 'll');
 
 -- --------------------------------------------------------
 
@@ -147,19 +147,19 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT for table `Kontakt`
 --
 ALTER TABLE `Kontakt`
-  MODIFY `idKontakt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idKontakt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `Portfolio`
 --
 ALTER TABLE `Portfolio`
-  MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `Social`
 --
 ALTER TABLE `Social`
-  MODIFY `idSocial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idSocial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `Users`
