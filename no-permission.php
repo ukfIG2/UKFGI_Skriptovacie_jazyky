@@ -2,7 +2,7 @@
     include('partials/header.php');
   ?>
 
-<img src="images/pass.jpg" alt="You shal not pass.">
+<a href="login.php"><img src="images/pass.jpg" alt="You shal not pass."></a>
 
 
 

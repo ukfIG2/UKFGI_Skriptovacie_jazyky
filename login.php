@@ -90,11 +90,6 @@
 										<input type="password" id="inputPassword-1" class="form-control" name="user_password" placeholder="Password" required>
 										<label for="inputPassword-1">Password</label>
 									</div>
-								  
-									<div class="form-label-group">
-										<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
-										<label for="inputConfirmPassword">Confirm password</label>
-									</div>
 									
 									<div class="custom-control custom-checkbox mb-3">
 										<input type="checkbox" class="custom-control-input" id="customCheck2" required>

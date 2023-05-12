@@ -33,7 +33,6 @@ if(isset($_POST['add_user'])){
                 $query_run = $db->conn->prepare($query);        
                 $query_run->execute($data);
                 //header("Location: ../../thankyou.php");
-                echo "pridany"; 
             }catch(PDOException $e){
                 $e->getMessage();
                 print($e);
@@ -48,7 +47,7 @@ if(isset($_POST['add_user'])){
                 }
             }    
             if($fakt=="false"){
-                echo "User so zadaným emailom už existuje";
+                echo '<a href="../../login.php"><img src="../../images/you_exist.jpg" alt="You shal not pass." style="height: 100%; " ></a>';
             }
             if($fakt=="true"){
                 try{
@@ -56,7 +55,7 @@ if(isset($_POST['add_user'])){
                     $query_run = $db->conn->prepare($query);        
                     $query_run->execute($data);
                     //header("Location: ../../thankyou.php");
-                    echo "pridany"; 
+                    echo '<a href="../../login.php"><img src="../../images/welcome.webp" alt="You shal not pass." style="height: 100%; " ></a>';
                 }catch(PDOException $e){
                     $e->getMessage();
                     print($e);

@@ -13,11 +13,19 @@
 			</div>
 			<div class="social_icon">
 				<ul>
-					<li><a href="#"><img src="images/fb-icon.png"></a></li>
+					<?php
+						
+						$social = $Social->get_social();
+						
+						for ($i=0;$i<count($social);$i++){
+							echo '<li><a href="'.$social[$i]->url.'"><img src="'.$social[$i]->image.'"></a></li>';
+						}
+					?>
+					<!--<li><a href="#"><img src="images/fb-icon.png"></a></li>
 					<li><a href="#"><img src="images/twitter-icon.png"></a></li>
 					<li><a href="#"><img src="images/linkdin-icon.png"></a></li>
 					<li><a href="#"><img src="images/instagram-icon.png"></a></li>
-					<li><a href="#"><img src="images/youtub-icon.png"></a></li>
+					<li><a href="#"><img src="images/youtub-icon.png"></a></li>-->
 				</ul>
 			</div>
 		</div>
