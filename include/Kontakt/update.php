@@ -7,12 +7,12 @@ echo "nieco3";
 $db =  new database();
 if(isset($_POST['update_contact'])){
 echo "";    $data = [
-        'id' => $_POST["idKontakt"],
+        'id' => $_POST["idForm"],/* */
         'answer' => $_POST["answer"],
     ];
     print_r($data);
     foreach ($kontakt as $q){
-        if($q->id==$data['id']){
+        if($q->idKontakt==$data['id']){
 
             if(empty($data['answer'])){
                 $data['answer'] = $q->answer;

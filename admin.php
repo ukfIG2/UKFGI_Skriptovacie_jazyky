@@ -60,8 +60,9 @@
                             </form></td>';
                       echo '<td>
                             <form action="include/Kontakt/update.php" method="post">
+                            <input type= "hidden" name="idForm" value="'.$c->idKontakt.'"'.'>
                             <input type="text" name="answer"placeholder="Názov odpovede">
-                                <button type = "submit" name="update_contact" value="'.$c->idKontakt.'"'.'>Aktualizovat odpoved</button>
+                                <button type = "submit" name="update_contact" /*value="'.$c->idKontakt.'"'.'*/>Aktualizovat odpoved</button>
                           </form></td>';
                             
                     echo '</tr>';
