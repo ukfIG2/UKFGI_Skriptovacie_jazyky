@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 09, 2023 at 03:32 PM
+-- Generation Time: May 12, 2023 at 09:50 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -34,17 +34,18 @@ CREATE TABLE `Kontakt` (
   `Phone` varchar(15) NOT NULL,
   `Element` varchar(30) NOT NULL,
   `Message` text NOT NULL,
-  `Date` timestamp NOT NULL DEFAULT current_timestamp()
+  `Date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Odpoved` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
 
 --
 -- Dumping data for table `Kontakt`
 --
 
-INSERT INTO `Kontakt` (`idKontakt`, `Name`, `Email`, `Phone`, `Element`, `Message`, `Date`) VALUES
-(3, 'test', 'test@test', '00000000000', 'test', 'test', '2023-05-08 22:06:13'),
-(20, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdf', '2023-05-08 22:06:13'),
-(21, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdfsgsrgsgwsg', '2023-05-08 22:06:27');
+INSERT INTO `Kontakt` (`idKontakt`, `Name`, `Email`, `Phone`, `Element`, `Message`, `Date`, `Odpoved`) VALUES
+(3, 'test', 'test@test', '00000000000', 'test', 'test', '2023-05-08 22:06:13', ''),
+(20, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdf', '2023-05-08 22:06:13', ''),
+(21, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdfsgsrgsgwsg', '2023-05-08 22:06:27', 'lenbo lebo\r\n');
 
 -- --------------------------------------------------------
 
@@ -66,8 +67,28 @@ CREATE TABLE `Portfolio` (
 INSERT INTO `Portfolio` (`idPortfolio`, `name`, `image`, `Text`) VALUES
 (1, 'website element', 'images/icon-1.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq'),
 (2, 'applicatinos element', 'images/icon-2.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliq'),
-(3, 'design element', 'images/icon-3.png', 'Nieco Nieco'),
-(8, 'Who service', 'images/who.png', 'bla bla');
+(3, 'design element', 'images/icon-3.png', 'Nieco Nieco');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Social`
+--
+
+CREATE TABLE `Social` (
+  `idSocial` int(11) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `image` varchar(30) NOT NULL,
+  `url` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
+
+--
+-- Dumping data for table `Social`
+--
+
+INSERT INTO `Social` (`idSocial`, `Name`, `image`, `url`) VALUES
+(1, 'youtube', 'images/youtub-icon.png', 'youtube.com'),
+(2, 'twitter', 'images/twitter-icon.png', 'twitter.com');
 
 -- --------------------------------------------------------
 
@@ -87,7 +108,8 @@ CREATE TABLE `Users` (
 --
 
 INSERT INTO `Users` (`idUser`, `Name`, `Email`, `Password`) VALUES
-(94, 'test', 'test@test', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3');
+(94, 'test', 'test@test', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'),
+(98, 'c', 'c@c', '84a516841ba77a5b4648de2cd0dfcb30ea46dbb4');
 
 --
 -- Indexes for dumped tables
@@ -104,6 +126,12 @@ ALTER TABLE `Kontakt`
 --
 ALTER TABLE `Portfolio`
   ADD PRIMARY KEY (`idPortfolio`);
+
+--
+-- Indexes for table `Social`
+--
+ALTER TABLE `Social`
+  ADD PRIMARY KEY (`idSocial`);
 
 --
 -- Indexes for table `Users`
@@ -128,10 +156,16 @@ ALTER TABLE `Portfolio`
   MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `Social`
+--
+ALTER TABLE `Social`
+  MODIFY `idSocial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
