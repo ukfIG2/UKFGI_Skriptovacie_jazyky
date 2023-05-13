@@ -8,10 +8,11 @@ if(isset($_POST['add_social'])){
         'image' => $_POST["image"],
         'url' => $_POST["url"],
     ];
-    //print_r($data);
+
     $query = "INSERT INTO Social (Name, image, url) VALUES (:name, :image, :url)";
     $query_run = $db->conn->prepare($query);
     $query_run->execute($data);
+    header("Location: ../../admin.php");
 }else{
     print_r("F");
 }

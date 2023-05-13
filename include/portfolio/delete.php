@@ -7,6 +7,7 @@ if(isset($_POST['delete_portfolio'])){
         //print_r($id);
         $sql = $sql = 'DELETE FROM Portfolio WHERE idPortfolio ='.$id;
         $db->conn->exec($sql);
+        header("Location: ../../admin.php");
     }catch(PDOException $e){
         print_r($e->getMessage());
     }

@@ -11,7 +11,7 @@ if(isset($_POST['contact_us'])){
         'contact_message' => $_POST["contact_message"],
         'contact_element' => $_POST["contact_element"],
     ];
-    //print_r($data);
+
     try{
         $query = "INSERT INTO Kontakt (Name, Phone, Email, Message, Element) VALUES (:contact_name, :contact_phone, :contact_email,:contact_message, :contact_element)";
         $query_run = $db->conn->prepare($query);

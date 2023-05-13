@@ -12,6 +12,7 @@ if(isset($_POST['add_portfolio'])){
     $query = "INSERT INTO Portfolio (name, image, Text) VALUES (:name, :image, :Text)";
     $query_run = $db->conn->prepare($query);
     $query_run->execute($data);
+    header("Location: ../../admin.php");
 }else{
     print_r("F");
 }

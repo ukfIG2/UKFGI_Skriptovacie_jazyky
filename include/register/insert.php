@@ -55,7 +55,7 @@ if(isset($_POST['add_user'])){
                     $query_run = $db->conn->prepare($query);        
                     $query_run->execute($data);
                     //header("Location: ../../thankyou.php");
-                    echo '<a href="../../login.php"><img src="../../images/welcome.webp" alt="You shal not pass." style="height: 100%; " ></a>';
+                    echo '<a href="../../login.php"><img src="../../images/welcome.webp" alt="Welcome" style="height: 100%; " ></a>';
                 }catch(PDOException $e){
                     $e->getMessage();
                     print($e);
