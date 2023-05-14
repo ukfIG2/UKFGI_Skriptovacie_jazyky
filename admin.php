@@ -121,7 +121,6 @@
 
     <?php
       $social = $Social->get_social();
-
       echo '<table class="admin-table" >';
       echo "<tr>";
         echo "<th>ID</th>";
@@ -145,6 +144,45 @@
     ?>
 
 </div>
+
+<div>
+<h1>Subscribers</h1>
+
+<?php 
+  $subscribers = $Subscribers->get_Subscribers();
+
+  echo '<table class="admin-table" >';
+  echo "<tr>";
+    echo "<th>ID</th>";
+    echo "<th>Email</th>";
+    echo "<th>Subscribed(when)</th>";
+    echo "<th>Subscribed</th>";
+
+  echo "</tr>";
+  foreach($subscribers as $d){
+    echo '<tr>';
+    echo '<td>'.$d->idSubscribers.'</td>';
+    echo '<td>'.$d->Email.'</td>';
+    echo '<td>'.$d->Subscribed_When.'</td>';
+    echo '<td>'.$d->UnSucribed.'</td>';
+    echo '<td>
+      <form action="include/Subscribers/unsubscribe.php" method="post">
+        <input type= "hidden" name="idForm" value="'.$d->idSubscribers.'"'.'>
+        <button type = "submit" name="update_subscribers" /*value="'.$d->idSubscribers.'"'.'*/>Unsubscribe</button>
+    </form></td>';
+    echo '<td>
+      <form action="include/Subscribers/subscribe.php" method="post">
+        <input type= "hidden" name="idForm" value="'.$d->idSubscribers.'"'.'>
+        <button type = "submit" name="update_subscribers" /*value="'.$d->idSubscribers.'"'.'*/>Subscribe</button>
+    </form></td>';
+    echo '</tr>';
+
+  }
+  echo '</table>';
+  
+?>
+</div>
+
 
 </body>
 </html>

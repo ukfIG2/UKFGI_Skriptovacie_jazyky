@@ -26,7 +26,7 @@
                              <input type="checkbox" required><label for=""> Súhlasím so spracovaním osobných údajov.</label><br>
                              <input type="submit" class="send_bt" value="Odoslať" name="contact_us">
                             
-</form>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-6">

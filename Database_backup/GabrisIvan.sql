@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 12, 2023 at 01:26 PM
+-- Generation Time: May 14, 2023 at 01:09 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -45,7 +45,7 @@ CREATE TABLE `Kontakt` (
 INSERT INTO `Kontakt` (`idKontakt`, `Name`, `Email`, `Phone`, `Element`, `Message`, `Date`, `Odpoved`) VALUES
 (3, 'test', 'test@test', '00000000000', 'test', 'test', '2023-05-08 22:06:13', ''),
 (20, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdf', '2023-05-08 22:06:13', ''),
-(21, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdfsgsrgsgwsg', '2023-05-08 22:06:27', 'll');
+(23, 'aa', 'aa@aa', 'aaa', 'applicatinos element', 'aaaa', '2023-05-13 21:22:58', 'hhh');
 
 -- --------------------------------------------------------
 
@@ -93,6 +93,29 @@ INSERT INTO `Social` (`idSocial`, `Name`, `image`, `url`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Subscribers`
+--
+
+CREATE TABLE `Subscribers` (
+  `idSubscribers` int(11) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Subscribed_When` timestamp NOT NULL DEFAULT current_timestamp(),
+  `UnSucribed` varchar(5) NOT NULL DEFAULT 'True'
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_slovak_ci;
+
+--
+-- Dumping data for table `Subscribers`
+--
+
+INSERT INTO `Subscribers` (`idSubscribers`, `Email`, `Subscribed_When`, `UnSucribed`) VALUES
+(1, 'a@a', '2023-05-13 22:41:19', 'True'),
+(2, 'ssssss', '2023-05-13 22:54:58', 'True'),
+(3, 'bbb', '2023-05-13 22:56:20', 'False'),
+(4, 'ddddd', '2023-05-14 11:01:22', 'True');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Users`
 --
 
@@ -134,6 +157,12 @@ ALTER TABLE `Social`
   ADD PRIMARY KEY (`idSocial`);
 
 --
+-- Indexes for table `Subscribers`
+--
+ALTER TABLE `Subscribers`
+  ADD PRIMARY KEY (`idSubscribers`);
+
+--
 -- Indexes for table `Users`
 --
 ALTER TABLE `Users`
@@ -147,19 +176,25 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT for table `Kontakt`
 --
 ALTER TABLE `Kontakt`
-  MODIFY `idKontakt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idKontakt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `Portfolio`
 --
 ALTER TABLE `Portfolio`
-  MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idPortfolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `Social`
 --
 ALTER TABLE `Social`
-  MODIFY `idSocial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idSocial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `Subscribers`
+--
+ALTER TABLE `Subscribers`
+  MODIFY `idSubscribers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `Users`

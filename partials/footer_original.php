@@ -2,10 +2,12 @@
 	<div class="footer_section layout_padding">
 		<div class="container">
 			<div class="footer_main">
-				<form class="input-group mb-3" action="include/Subscribers/insert.php" method="post">
-                    <input type="text" class="form-control" placeholder="Enter your email" name="Email">
-                    <input type="submit" class="input-group-append" value="Odoslať" name="subscribe_us">
-				</form>
+				<div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2">subscribe Now</span>
+                    </div>
+                </div>
                 <h1 class="year_text">2020</h1>
                 <h1 class="landing_text">Free Multipurpose Responsive  Landing Page </h1>
 			</div>
