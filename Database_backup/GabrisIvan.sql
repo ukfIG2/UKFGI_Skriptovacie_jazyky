@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 14, 2023 at 01:09 PM
+-- Generation Time: May 14, 2023 at 10:57 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -45,7 +45,7 @@ CREATE TABLE `Kontakt` (
 INSERT INTO `Kontakt` (`idKontakt`, `Name`, `Email`, `Phone`, `Element`, `Message`, `Date`, `Odpoved`) VALUES
 (3, 'test', 'test@test', '00000000000', 'test', 'test', '2023-05-08 22:06:13', ''),
 (20, 'dfvsdf', 'sdfsdf@sdf', 'sdfsd', 'saab', 'sdfsdf', '2023-05-08 22:06:13', ''),
-(23, 'aa', 'aa@aa', 'aaa', 'applicatinos element', 'aaaa', '2023-05-13 21:22:58', 'hhh');
+(23, 'aa', 'aa@aa', 'aaa', 'applicatinos element', 'aaaa', '2023-05-13 21:22:58', 'f');
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,11 @@ INSERT INTO `Subscribers` (`idSubscribers`, `Email`, `Subscribed_When`, `UnSucri
 (1, 'a@a', '2023-05-13 22:41:19', 'True'),
 (2, 'ssssss', '2023-05-13 22:54:58', 'True'),
 (3, 'bbb', '2023-05-13 22:56:20', 'False'),
-(4, 'ddddd', '2023-05-14 11:01:22', 'True');
+(4, 'ddddd', '2023-05-14 11:01:22', 'True'),
+(5, 'fggs', '2023-05-14 18:37:50', 'True'),
+(6, '', '2023-05-14 18:38:53', 'True'),
+(7, 'jjj@ggg', '2023-05-14 18:40:19', 'True'),
+(8, 'jjj@gggujtfjadadasdadadgsggr', '2023-05-14 18:48:21', 'False');
 
 -- --------------------------------------------------------
 
@@ -132,7 +136,8 @@ CREATE TABLE `Users` (
 
 INSERT INTO `Users` (`idUser`, `Name`, `Email`, `Password`) VALUES
 (94, 'test', 'test@test', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3'),
-(98, 'c', 'c@c', '84a516841ba77a5b4648de2cd0dfcb30ea46dbb4');
+(98, 'c', 'c@c', '84a516841ba77a5b4648de2cd0dfcb30ea46dbb4'),
+(99, '1', '1@1', '356a192b7913b04c54574d18c28d46e6395428ab');
 
 --
 -- Indexes for dumped tables
@@ -194,13 +199,13 @@ ALTER TABLE `Social`
 -- AUTO_INCREMENT for table `Subscribers`
 --
 ALTER TABLE `Subscribers`
-  MODIFY `idSubscribers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idSubscribers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
