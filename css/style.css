@@ -565,6 +565,7 @@ button {
     border-bottom: 2px solid #c5a2e7;
     border-radius: 0px;
     padding-left: 0px;
+    color: white;
 }
 
 input.form-control::placeholder {
@@ -587,6 +588,7 @@ input.form-control::placeholder {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-bottom: -10px;
+    color: white;   /*Preco nefunguje?*/
 }
 
 .year_text{

@@ -25,7 +25,7 @@
         <a href="include/login/logout.php">Odhlásiť sa</a>
 </div>
 
-<div>
+<div class="row">
   <h1>Kontaktovali nas</h1>
 
   <?php
@@ -71,7 +71,7 @@
   ?>
 </div>
 
-<div>
+<div class="row">
   <h1>Elementy(portfolio)</h1>
 
   <form action="include/portfolio/insert.php" method="post">
@@ -109,7 +109,7 @@
 
 </div>
 
-<div>
+<div class="row">
   <h1>Socialne siete</h1>
 
   <form action="include/Social/insert.php" method="post">
@@ -145,7 +145,7 @@
 
 </div>
 
-<div>
+<div class="row">
 <h1>Subscribers</h1>
 
 <?php 

@@ -3,10 +3,10 @@
 		<div class="container">
 			<div class="footer_main">
 				<form class="input-group mb-3" action="include/Subscribers/insert.php" method="post">
-                    <input type="text" class="form-control" placeholder="Enter your email" name="Email">
+                    <input type="email" class="form-control" placeholder="Enter your email" name="Email">
                     <input type="submit" class="input-group-append" value="Odoslať" name="subscribe_us">
 				</form>
-                <h1 class="year_text">2020</h1>
+                <h1 class="year_text">2023</h1>
                 <h1 class="landing_text">Free Multipurpose Responsive  Landing Page </h1>
 			</div>
 			<div class="social_icon">
